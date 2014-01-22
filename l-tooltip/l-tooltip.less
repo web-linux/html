@@ -1,0 +1,45 @@
+.border-radius (@r) {
+	-webkit-border-radius: @r;
+	-moz-border-radius: @r;
+	border-radius: @r;
+}
+
+.l-tooltip {
+	margin: 0 0 0 5px;
+	display: inline-block;
+	vertical-align: middle;
+	font-style: normal;
+	line-height: 1;
+}
+
+.tooltip {
+	font-style: normal;
+	cursor: pointer;
+	.border-radius (8px);
+	display: inline-block;
+	background: #000;
+	padding: 1px 4px;
+	color: #fff;
+	font: 12px/1 Arial;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+
+	&-popup {
+		position: absolute;
+		background: rgba(0, 0, 0, 0.3);
+		.border-radius (5px);
+		padding: 5px;
+		left: -1000%;
+		z-index: 10000;
+
+		&__inner {
+			padding: 10px;
+			background: rgba(0, 0, 0, 0.9);
+			.border-radius (5px);
+			color: #fff;
+			font: 12px/16px Arial, sans-serif;
+		}
+	}
+
+}
